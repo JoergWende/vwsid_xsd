@@ -24,6 +24,13 @@
 		</sequence>
 	</complexType>
 
+	<complexType name="security_t">
+		<sequence>
+			<element name="accessControlPolicyPoints" type="aas:accessControlPolicyPoints_t" minOccurs="1" maxOccurs="1"></element>
+			<element name="trustAchor" type="aas:certificate_t" minOccurs="0" maxOccurs="1"></element>
+		</sequence>
+	</complexType>
+
 	<complexType name="assets_t">
 		<sequence>
 			<element name="asset" type="aas:asset_t" minOccurs="0"
@@ -45,13 +52,22 @@
 		<sequence>
 			<group ref="aas:identifiable"></group>
 			<group ref="aas:hasDataSpecifications"></group>
-			<element name="derivedFrom" type="aas:reference_t" minOccurs="0" maxOccurs="1"></element>
-			<element name="assetRef" type="aas:reference_t" minOccurs="1" maxOccurs="1"></element>
-			<element name="submodelRefs" type="aas:submodelRefs_t" minOccurs="0" maxOccurs="1"></element>
-			<element name="views" type="aas:views_t" minOccurs="0" maxOccurs="1"></element>
+			<element name="derivedFrom" type="aas:reference_t"
+				minOccurs="0" maxOccurs="1">
+			</element>
+			<element name="assetRef" type="aas:reference_t"
+				minOccurs="1" maxOccurs="1">
+			</element>
+			<element name="submodelRefs" type="aas:submodelRefs_t"
+				minOccurs="0" maxOccurs="1">
+			</element>
+			<element name="views" type="aas:views_t" minOccurs="0"
+				maxOccurs="1">
+			</element>
 			<element name="conceptDictionaries"
 				type="aas:conceptDictionaries_t" minOccurs="0" maxOccurs="1">
 			</element>
+			<element name="security" type="aas:security_t" minOccurs="0" maxOccurs="1"></element>
 		</sequence>
 	</complexType>
 
@@ -531,4 +547,80 @@
 			<extension base="aas:langStrings_t"></extension>
 		</complexContent>
 	</complexType>
+
+
+    <complexType name="certificate_t"></complexType>
+
+    <complexType name="accessControlPolicyPoints_t">
+    	<sequence>
+    		<element name="policyAdministrationPoint" type="aas:policyAdministrationPoint_t" minOccurs="1" maxOccurs="1"></element>
+    		<element name="policyDecisionPoint" type="aas:policyDecisionPoint_t" minOccurs="1" maxOccurs="1"></element>
+    		<element name="policyEnforcementPoint" type="aas:policyEnforcementPoint_t" minOccurs="1" maxOccurs="1"></element>
+    		<element name="policyInformationPoints" type="aas:policyInformationPoints_t" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="policyAdministrationPoint_t">
+    	<sequence>
+    		<element name="localAccessControl" type="aas:accessControl_t" minOccurs="0" maxOccurs="1"></element>
+    		<element ref="aas:externalAccessControl" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="policyDecisionPoint_t"></complexType>
+
+    <complexType name="policyEnforcementPoint_t"></complexType>
+
+    <complexType name="policyInformationPoints_t">
+    	<sequence>
+    		<element name="externalInformationPoint"
+    			type="aas:endPoint_t" minOccurs="0" maxOccurs="unbounded">
+    		</element>
+    		<element ref="aas:internalInformationPoint" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="externalAccessControl" type="aas:endPoint_t"></element>
+
+    <complexType name="endPoint_t"></complexType>
+
+    <complexType name="accessControl_t">
+    	<sequence>
+    		<element name="accessPermissionRule"
+    			type="aas:accessPermissionRule_t" minOccurs="0" maxOccurs="1">
+    		</element>
+    		<element ref="aas:selectableSubjectAttributes" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element ref="aas:defaultSubjectAttributes" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+    		<element ref="aas:selectablePermissions" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element ref="aas:defaultPermissions" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+    		<element ref="aas:selectableEnvironmentAttributes"
+    			minOccurs="0" maxOccurs="1">
+    		</element>
+    		<element ref="aas:defaultEnvironmentAttributes"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="internalInformationPoint" type="aas:submodelRefs_t"></element>
+
+    <complexType name="accessPermissionRule_t"></complexType>
+
+    <element name="selectableSubjectAttributes" type="aas:submodel_t"></element>
+
+    <element name="defaultSubjectAttributes" type="aas:submodel_t"></element>
+
+    <element name="selectablePermissions" type="aas:submodel_t"></element>
+
+    <element name="defaultPermissions" type="aas:submodel_t"></element>
+
+    <element name="selectableEnvironmentAttributes" type="aas:submodel_t"></element>
+
+    <element name="defaultEnvironmentAttributes" type="aas:submodel_t"></element>
 </schema>
