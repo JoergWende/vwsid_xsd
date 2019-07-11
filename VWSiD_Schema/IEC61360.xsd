@@ -21,9 +21,6 @@
 			<xsd:element ref="IEC61360:unitId" maxOccurs="1"
 				minOccurs="0">
 			</xsd:element>
-			<xsd:element ref="IEC61360:valueFormat" maxOccurs="1"
-				minOccurs="0">
-			</xsd:element>
 			<xsd:element ref="IEC61360:sourceOfDefinition" maxOccurs="1"
 				minOccurs="0">
 			</xsd:element>
@@ -36,25 +33,38 @@
 			<xsd:element ref="IEC61360:definition" maxOccurs="1"
 				minOccurs="0">
 			</xsd:element>
+			<xsd:element ref="IEC61360:valueFormat" maxOccurs="1"
+				minOccurs="0">
+			</xsd:element>
+
+
+
+
 			<xsd:element ref="IEC61360:valueList" maxOccurs="1"
 				minOccurs="0">
 			</xsd:element>
-			<xsd:element ref="IEC61360:code" maxOccurs="1"
-				minOccurs="0">
+
+			<xsd:element ref="IEC61360:value" minOccurs="0"
+				maxOccurs="1">
 			</xsd:element>
+			<xsd:element ref="IEC61360:valueId" minOccurs="0" maxOccurs="1"></xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
 
 
 
 
-	<xsd:complexType name="valueList_t"></xsd:complexType>
+	<xsd:complexType name="valueList_t">
+		<xsd:sequence>
+			<xsd:element ref="IEC61360:valueReferenceType" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
 
 	<xsd:complexType name="code_t"></xsd:complexType>
 
 	<xsd:element name="preferredName" type="aas:langStrings_t"></xsd:element>
 
-	<xsd:element name="shortName" type="xsd:string"></xsd:element>
+	<xsd:element name="shortName" type="aas:langString_t"></xsd:element>
 
 	<xsd:element name="unit" type="xsd:string"></xsd:element>
 
@@ -63,7 +73,7 @@
 	<xsd:element name="valueFormat" type="xsd:string"></xsd:element>
 
 	<xsd:element name="sourceOfDefinition"
-		type="aas:langStrings_t">
+		type="xsd:string">
 	</xsd:element>
 
 	<xsd:element name="symbol" type="xsd:string"></xsd:element>
@@ -77,4 +87,17 @@
 	<xsd:element name="code" type="IEC61360:code_t"></xsd:element>
 
 	<xsd:element name="valueList" type="IEC61360:valueList_t"></xsd:element>
+
+    <xsd:element name="value" type="xsd:anySimpleType"></xsd:element>
+
+    <xsd:element name="valueId" type="aas:reference_t"></xsd:element>
+
+    <xsd:element name="valueReferenceType" type="IEC61360:valueReference_t"></xsd:element>
+
+    <xsd:complexType name="valueReference_t">
+    	<xsd:sequence>
+    		<xsd:element ref="IEC61360:value" minOccurs="0" maxOccurs="1"></xsd:element>
+    		<xsd:element ref="IEC61360:valueId" minOccurs="0" maxOccurs="1"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
 </xsd:schema>
