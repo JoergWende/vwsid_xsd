@@ -27,7 +27,7 @@
 	<complexType name="security_t">
 		<sequence>
 			<element name="accessControlPolicyPoints" type="aas:accessControlPolicyPoints_t" minOccurs="1" maxOccurs="1"></element>
-			<element name="trustAchor" type="aas:certificate_t" minOccurs="0" maxOccurs="1"></element>
+			<element name="trustAchor" type="aas:certificates_t" minOccurs="0" maxOccurs="1"></element>
 		</sequence>
 	</complexType>
 
@@ -549,7 +549,6 @@
 	</complexType>
 
 
-    <complexType name="certificate_t"></complexType>
 
     <complexType name="accessControlPolicyPoints_t">
     	<sequence>
@@ -562,8 +561,10 @@
 
     <complexType name="policyAdministrationPoint_t">
     	<sequence>
-    		<element name="localAccessControl" type="aas:accessControl_t" minOccurs="0" maxOccurs="1"></element>
-    		<element ref="aas:externalAccessControl" minOccurs="0" maxOccurs="1"></element>
+    		<element name="localAccessControl"
+    			type="aas:accessControl_t" minOccurs="0" maxOccurs="1">
+    		</element>
+    		<element name="externalAccessControl" type="aas:reference_t" minOccurs="0" maxOccurs="1"></element>
     	</sequence>
     </complexType>
     
@@ -580,7 +581,6 @@
     	</sequence>
     </complexType>
     
-    <element name="externalAccessControl" type="aas:endPoint_t"></element>
 
     <complexType name="endPoint_t"></complexType>
 
@@ -604,23 +604,75 @@
     		<element ref="aas:selectableEnvironmentAttributes"
     			minOccurs="0" maxOccurs="1">
     		</element>
-    		<element ref="aas:defaultEnvironmentAttributes"></element>
+    		<element ref="aas:defaultEnvironmentAttributes" minOccurs="0" maxOccurs="1"></element>
     	</sequence>
     </complexType>
     
-    <element name="internalInformationPoint" type="aas:submodelRefs_t"></element>
 
-    <complexType name="accessPermissionRule_t"></complexType>
+    <complexType name="permissionPerObject_t">
+    	<sequence>
+    		<element name="object" type="aas:reference_t"></element>
+    		<element name="targetObjectAttributes"
+    			type="aas:objectAttributes_t">
+    		</element>
+    		<element name="permissions" type="aas:permissions_t" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
 
-    <element name="selectableSubjectAttributes" type="aas:submodel_t"></element>
 
-    <element name="defaultSubjectAttributes" type="aas:submodel_t"></element>
 
-    <element name="selectablePermissions" type="aas:submodel_t"></element>
 
-    <element name="defaultPermissions" type="aas:submodel_t"></element>
 
-    <element name="selectableEnvironmentAttributes" type="aas:submodel_t"></element>
 
-    <element name="defaultEnvironmentAttributes" type="aas:submodel_t"></element>
+
+    <complexType name="objectAttributes_t">
+    	<sequence>
+    		<element name="objectAttribute" type="aas:property_t" minOccurs="1" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="permissions_t">
+    	<sequence>
+    		<element name="permission" type="aas:property_t"
+    			minOccurs="0" maxOccurs="1">
+    		</element>
+    		<element name="kindOfPermission" type="aas:permissionKind"></element>
+    	</sequence>
+    </complexType>
+
+    <simpleType name="permissionKind">
+    	<restriction base="string">
+    		<enumeration value="allow"></enumeration>
+    		<enumeration value="deny"></enumeration>
+    		<enumeration value="not applicable"></enumeration>
+    		<enumeration value="undefined"></enumeration>
+    	</restriction>
+    </simpleType>
+
+    <complexType name="accessPermissionRule_t">
+    	<sequence>
+    		<group ref="aas:qualifiable"></group>
+			<group ref="aas:referable"></group>
+    		<element name="targetSubjectAttributes"
+    			type="aas:subjectAttributes_t" minOccurs="1"
+    			maxOccurs="unbounded">
+    		</element>
+    		<element name="permissionsPerObject"
+    			type="aas:permissionPerObject_t" minOccurs="0"
+    			maxOccurs="unbounded">
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="subjectAttributes_t">
+    	<sequence>
+    		<element name="subjectAttribute" type="aas:property_t" minOccurs="1" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="certificates_t">
+    	<sequence>
+    		<element name="certificate" type="aas:blob_t" minOccurs="1" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
 </schema>
