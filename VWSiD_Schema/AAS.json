@@ -72,7 +72,7 @@
 "administration": {
 "$ref":
 "#/definitions/AdministrativeInformation"
-},
+}
 },
 "required": ["identification"]
 }]
@@ -85,7 +85,7 @@
 "items": {
 "$ref": "#/definitions/Constraint"
 }
-},
+}
 }
 },
 "HasSemantics": {
@@ -732,7 +732,7 @@
 },
 "asset": {
 "$ref": "#/definitions/Reference"
-},
+}
 },
 "required": ["entityType"]
 }]
