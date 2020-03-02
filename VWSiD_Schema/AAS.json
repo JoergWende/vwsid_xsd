@@ -1,0 +1,591 @@
+{ "$schema": "https://json-schema.org/draft/2019­09/schema", "title": "AssetAdministrationShellEnvironment", "type": "object", "$id": "urn://www.admin-shell.io/schema/json/v2.0", "required": ["assetAdministrationShells", "submodels", "assets", "conceptDescriptions"], "properties": { "assetAdministrationShells": { "type": "array", "items": { "$ref": "#/definitions/AssetAdministrationShell" } }, "submodels": { "type": "array", "items": { "$ref": "#/definitions/Submodel" } }, "assets": { "type": "array", "items": { "$ref": "#/definitions/Asset" } }, "conceptDescriptions": {  }, "required": ["value"] }, "SubmodelElement": { "allOf": [{ "$ref": "#/definitions/Referable" }, { "$ref": "#/definitions/HasDataSpecification" }, { "$ref": "#/definitions/HasSemantics" }, { "$ref": "#/definitions/Qualifiable" }, { "properties": { "kind": { "$ref": "#/definitions/ModelingKind" } } }] }, "Event": { "allOf": [{ "$ref": "#/definitions/SubmodelElement" }] }, "BasicEvent": {  
+
+44 see: http://json-schema.org/ 
+"type": "array",  "allOf": [{  
+"items": {  "$ref": "#/definitions/Event"  
+"$ref": "#/definitions/ConceptDescription"  },  
+}  {  
+}  "properties": {  
+},  "observed": {  
+"definitions": {  "$ref": "#/definitions/Reference"  
+"Referable": {  }  
+"type": "object",  },  
+"properties": {  "required": ["observed"]  
+"idShort": {  }]  
+"type": "string"  },  
+},  "EntityType": {  
+"category": {  "type": "string",  
+"type": "string"  "enum": ["CoManagedEntity",  
+},  "SelfManagedEntity"]  
+"description": {  },  
+"type": "array",  "Entity": {  
+"items": {  "allOf": [{  
+"$ref": "#/definitions/LangString"  "$ref": "#/definitions/SubmodelElement"  
+}  },  
+},  {  
+"parent": {  "properties": {  
+"$ref": "#/definitions/Reference"  "statements": {  
+},  "type": "array",  
+"modelType": {  "items": {  
+"$ref": "#/definitions/ModelType"  "$ref":  
+}  "#/definitions/SubmodelElement"  
+},  }  
+"required": ["idShort",  },  
+"modelType"]  "entityType": {  
+},  "$ref": "#/definitions/EntityType"  
+"Identifiable": {  },  
+"allOf": [{  "asset": {  
+"$ref": "#/definitions/Referable"  "$ref": "#/definitions/Reference"  
+},  },  
+{  
+},  
+
+"properties": {  "required": ["entityType"]  
+"identification": {  }]  
+"$ref": "#/definitions/Identifier"  },  
+},  "View": {  
+"administration": {  "allOf": [{  
+"$ref":  "$ref": "#/definitions/Referable"  
+"#/definitions/AdministrativeInformation"  },  
+},  {  
+"$ref": "#/definitions/HasDataSpecification"  
+},  },  
+"required": ["identification"]  {  
+}]  "$ref": "#/definitions/HasSemantics"  
+},  },  
+"Qualifiable": {  {  
+"type": "object",  "properties": {  
+"properties": {  "containedElements": {  
+"qualifiers": {  "type": "array",  
+"type": "array",  "items": {  
+"items": {  "$ref": "#/definitions/Reference"  
+"$ref": "#/definitions/Constraint"  }  
+}  }  
+},  }  
+}]  
+}  },  
+},  "ConceptDictionary": {  
+"HasSemantics": {  "allOf": [{  
+"type": "object",  "$ref": "#/definitions/Referable"  
+"properties": {  },  
+"semanticId": {  {  
+"$ref": "#/definitions/Reference"  "$ref": "#/definitions/HasDataSpecification"  
+}  },  
+},  {  
+"required": ["semanticId"]  "properties": {  
+},  "conceptDescriptions": {  
+"HasDataSpecification": {  "type": "array",  
+"type": "object",  "items": {  
+"properties": {  "$ref": "#/definitions/Reference"  
+"embeddedDataSpecifications": {  
+
+"type": "array",  }  
+"items": {  }  
+"$ref":  }  
+"#/definitions/EmbeddedDataSpecification"  }]  
+}  },  
+}  "ConceptDescription": {  
+}  "allOf": [{  
+},  "$ref": "#/definitions/Identifiable"  
+"AssetAdministrationShell": {  },  
+"allOf": [{  {  
+"$ref": "#/definitions/Identifiable"  "$ref": "#/definitions/HasDataSpecification"  
+},  },  
+{  {  
+"$ref": "#/definitions/HasDataSpecification"  "properties": {  
+},  "isCaseOf": {  
+{  "type": "array",  
+"properties": {  "items": {  
+"derivedFrom": {  "$ref": "#/definitions/Reference"  
+"$ref": "#/definitions/Reference"  }  
+},  }  
+"asset": {  }  
+"$ref": "#/definitions/Reference"  }]  
+},  },  
+"submodels": {  "Capability": {  
+"type": "array",  "allOf": [{  
+"items": {  "$ref": "#/definitions/SubmodelElement"  
+"$ref": "#/definitions/Reference"  }]  
+}  },  
+},  "Property": {  
+"views": {  "allOf": [{  
+"type": "array",  "$ref": "#/definitions/SubmodelElement"  
+"items": {  },  
+"$ref": "#/definitions/View"  {  
+}  "$ref": "#/definitions/ValueObject"  
+},  }]  
+"conceptDictionaries": {  },  
+"type": "array",  "Range": {  
+"items": {  
+
+"$ref":  "allOf": [{  
+"#/definitions/ConceptDictionary"  "$ref": "#/definitions/SubmodelElement"  
+}  },  
+},  {  
+"security": {  "properties": {  
+"$ref": "#/definitions/Security"  "valueType": {  
+}  "type": "string",  
+},  "enum": ["anyUri",  
+"required": ["asset"]  "base64Binary",  
+}]  "boolean",  
+},  "date",  
+"Identifier": {  "dateTime",  
+"type": "object",  "dateTimeStamp",  
+"properties": {  "decimal",  
+"id": {  "integer",  
+"type": "string"  "long",  
+},  "int",  
+"idType": {  "short",  
+"$ref": "#/definitions/KeyType"  "byte",  
+}  "nonNegativeInteger",  
+},  "positiveInteger",  
+"required": ["id",  "unsignedLong",  
+"idType"]  "unsignedInt",  
+},  "unsignedShort",  
+"KeyType": {  "unsignedByte",  
+"type": "string",  "nonPositiveInteger",  
+"enum": ["Custom",  "negativeInteger",  
+"IRDI",  "double",  
+"IRI",  "duration",  
+"IdShort",  "dayTimeDuration",  
+"FragmentId"]  "yearMonthDuration",  
+},  "float",  
+"AdministrativeInformation": {  "gDay",  
+"type": "object",  "gMonth",  
+"properties": {  "gMonthDay",  
+"version": {  "gYear",  
+"type": "string"  "gYearMonth",  
+},  
+
+"revision": {  "hexBinary",  
+"type": "string"  "NOTATION",  
+}  "QName",  
+}  "string",  
+},  "normalizedString",  
+"LangString": {  "token",  
+"type": "object",  "language",  
+"properties": {  "Name",  
+"language": {  "NCName",  
+"type": "string"  "ENTITY",  
+},  "ID",  
+"text": {  "IDREF",  
+"type": "string"  "NMTOKEN",  
+}  "time"]  
+},  },  
+"required": ["language",  "min": {  
+"text"]  "type": "string"  
+},  },  
+"Reference": {  "max": {  
+"type": "object",  "type": "string"  
+"properties": {  }  
+"keys": {  },  
+"type": "array",  "required": ["valueType",  
+"items": {  "min",  
+"$ref": "#/definitions/Key"  "max"]  
+}  }]  
+}  },  
+},  "MultiLanguageProperty": {  
+"required": ["keys"]  "allOf": [{  
+},  "$ref": "#/definitions/SubmodelElement"  
+"Key": {  },  
+"type": "object",  {  
+"properties": {  "properties": {  
+"type": {  "value": {  
+"$ref": "#/definitions/KeyElements"  "type": "array",  
+},  "items": {  
+"idType": {  "$ref": "#/definitions/LangString"  
+
+"$ref": "#/definitions/KeyType"  }  
+},  },  
+"value": {  "valueId": {  
+"type": "string"  "$ref": "#/definitions/Reference"  
+},  }  
+"local": {  }  
+"type": "boolean"  }]  
+}  },  
+},  "File": {  
+"required": ["type",  "allOf": [{  
+"idType",  "$ref": "#/definitions/SubmodelElement"  
+"value",  },  
+"local"]  {  
+},  "properties": {  
+"KeyElements": {  "value": {  
+"type": "string",  "type": "string"  
+"enum": ["Asset",  },  
+"AssetAdministrationShell",  "mimeType": {  
+"ConceptDescription",  "type": "string"  
+"Submodel",  }  
+"AccessPermissionRule",  },  
+"AnnotatedRelationshipElement",  "required": ["mimeType",  
+"BasicEvent",  "value"]  
+"Blob",  }]  
+"Capability",  },  
+"ConceptDictionary",  "Blob": {  
+"DataElement",  "allOf": [{  
+"File",  "$ref": "#/definitions/SubmodelElement"  
+"Entity",  },  
+"Event",  {  
+"MultiLanguageProperty",  "properties": {  
+"Operation",  "value": {  
+"Property",  "type": "string"  
+"Range",  },  
+"ReferenceElement",  "mimeType": {  
+"RelationshipElement",  "type": "string"  
+"SubmodelElement",  }  
+
+"SubmodelElementCollection",  },  
+"View",  "required": ["mimeType",  
+"GlobalReference",  "value"]  
+"FragmentReference"]  }]  
+},  },  
+"ModelTypes": {  "ReferenceElement": {  
+"type": "string",  "allOf": [{  
+"enum": ["Asset",  "$ref": "#/definitions/SubmodelElement"  
+"AssetAdministrationShell",  },  
+"ConceptDescription",  {  
+"Submodel",  "properties": {  
+"AccessPermissionRule",  "value": {  
+"AnnotatedRelationshipElement",  "$ref": "#/definitions/Reference"  
+"BasicEvent",  }  
+"Blob",  }  
+"Capability",  }]  
+"ConceptDictionary",  },  
+"DataElement",  "SubmodelElementCollection": {  
+"File",  "allOf": [{  
+"Entity",  "$ref": "#/definitions/SubmodelElement"  
+"Event",  },  
+"MultiLanguageProperty",  {  
+"Operation",  "properties": {  
+"Property",  "value": {  
+"Range",  "type": "array",  
+"ReferenceElement",  "items": {  
+"RelationshipElement",  "oneOf": [{  
+"SubmodelElement",  "$ref": "#/definitions/Blob"  
+"SubmodelElementCollection",  },  
+"View",  {  
+"GlobalReference",  "$ref": "#/definitions/File"  
+"FragmentReference",  },  
+"Constraint",  {  
+"Formula",  "$ref": "#/definitions/Capability"  
+"Qualifier"]  },  
+},  {  
+"ModelType": {  "$ref": "#/definitions/Entity"  
+
+"type": "object",  },  
+"properties": {  {  
+"name": {  "$ref": "#/definitions/Event"  
+"$ref": "#/definitions/ModelTypes"  },  
+}  {  
+},  "$ref": "#/definitions/BasicEvent"  
+"required": ["name"]  },  
+},  {  
+"EmbeddedDataSpecification": {  "$ref":  
+"type": "object",  "#/definitions/MultiLanguageProperty"  
+"properties": {  },  
+"dataSpecification": {  {  
+"$ref": "#/definitions/Reference"  "$ref": "#/definitions/Operation"  
+},  },  
+"dataSpecificationContent": {  {  
+"$ref":  "$ref": "#/definitions/Property"  
+"#/definitions/DataSpecificationContent"  },  
+}  {  
+},  "$ref": "#/definitions/Range"  
+"required": ["dataSpecification",  },  
+"dataSpecificationContent"]  {  
+},  "$ref":  
+"DataSpecificationContent": {  "#/definitions/ReferenceElement"  
+"oneOf": [{  },  
+"$ref":  {  
+"#/definitions/DataSpecificationIEC61360Content"  "$ref":  
+},  "#/definitions/RelationshipElement"  
+{  },  
+"$ref":  {  
+"#/definitions/DataSpecificationPhysicalUnitContent"  "$ref":  
+}]  "#/definitions/SubmodelElementCollection"  
+},  }]  
+"DataSpecificationPhysicalUnitContent": {  }  
+"type": "object",  },  
+"properties": {  "allowDuplicates": {  
+"unitName": {  "type": "boolean"  
+"type": "string"  },  
+},  "ordered": {  
+"type": "boolean"  
+
+"unitSymbol": {  }  
+"type": "string"  }  
+},  }]  
+"definition": {  },  
+"type": "array",  "RelationshipElement": {  
+"items": {  "allOf": [{  
+"$ref": "#/definitions/LangString"  "$ref": "#/definitions/SubmodelElement"  
+}  },  
+},  {  
+"siNotation": {  "properties": {  
+"type": "string"  "first": {  
+},  "$ref": "#/definitions/Reference"  
+"siName": {  },  
+"type": "string"  "second": {  
+},  "$ref": "#/definitions/Reference"  
+"dinNotation": {  }  
+"type": "string"  },  
+},  "required": ["first",  
+"eceName": {  "second"]  
+"type": "string"  }]  
+},  },  
+"eceCode": {  "AnnotatedRelationshipElement": {  
+"type": "string"  "allOf": [{  
+},  "$ref": "#/definitions/RelationshipElement"  
+"nistName": {  },  
+"type": "string"  {  
+},  "properties": {  
+"sourceOfDefinition": {  "annotation": {  
+"type": "string"  "type": "array",  
+},  "items": {  
+"conversionFactor": {  "$ref": "#/definitions/Reference"  
+"type": "string"  }  
+},  }  
+"registrationAuthorityId": {  }  
+"type": "string"  }]  
+},  },  
+"supplier": {  "Qualifier": {  
+
+"type": "string"  "allOf": [{  
+}  "$ref": "#/definitions/Constraint"  
+},  },  
+"required": ["unitName",  {  
+"unitSymbol",  "$ref": "#/definitions/HasSemantics"  
+"definition"]  },  
+},  {  
+"DataSpecificationIEC61360Content": {  "$ref": "#/definitions/ValueObject"  
+"allOf": [{  },  
+"$ref": "#/definitions/ValueObject"  {  
+},  "properties": {  
+{  "type": {  
+"type": "object",  "type": "string"  
+"properties": {  }  
+"dataType": {  },  
+"enum": ["DATE",  "required": ["type"]  
+"STRING",  }]  
+"STRING_TRANSLATABLE",  },  
+"REAL_MEASURE",  "Formula": {  
+"REAL_COUNT",  "allOf": [{  
+"REAL_CURRENCY",  "$ref": "#/definitions/Constraint"  
+"BOOLEAN",  },  
+"URL",  {  
+"RATIONAL",  "properties": {  
+"RATIONAL_MEASURE",  "dependsOn": {  
+"TIME",  "type": "array",  
+"TIMESTAMP"]  "items": {  
+},  "$ref": "#/definitions/Reference"  
+"definition": {  }  
+"type": "array",  }  
+"items": {  }  
+"$ref": "#/definitions/LangString"  }]  
+}  },  
+},  "Security": {  
+"preferredName": {  "type": "object",  
+"type": "array",  "properties": {  
+"items": {  "accessControlPolicyPoints": {  
+
+"$ref": "#/definitions/LangString"  "$ref":  
+}  "#/definitions/AccessControlPolicyPoints"  
+}, "shortName": {  }, "certificate": {  
+"type": "array",  "type": "array",  
+"items": {  "items": {  
+"$ref": "#/definitions/LangString"  "oneOf": [{  
+}  "$ref": "#/definitions/BlobCertificate"  
+},  }]  
+"sourceOfDefinition": {  }  
+"type": "string"  },  
+}, "symbol": {  "requiredCertificateExtension": { "type": "array",  
+"type": "string"  "items": {  
+},  "$ref": "#/definitions/Reference"  
+"unit": {  }  
+"type": "string"  }  
+}, "unitId": {  }, "required": ["accessControlPolicyPoints"]  
+"$ref": "#/definitions/Reference"  },  
+}, "valueFormat": {  "Certificate": { "type": "object"  
+"type": "string"  },  
+}, "valueList": {  "BlobCertificate": { "allOf": [{  
+"$ref": "#/definitions/ValueList"  "$ref": "#/definitions/Certificate"  
+},  },  
+"levelType": {  {  
+"type": "array",  "properties": {  
+"items": {  "blobCertificate": {  
+"$ref": "#/definitions/LevelType"  "$ref": "#/definitions/Blob"  
+} } }, "required": ["preferredName"]  }, "containedExtension": { "type": "array", "items": {  
+}]  "$ref": "#/definitions/Reference"  
+},  }  
+},  
+
+"LevelType": { "type": "string", "enum": ["Min", "Max", "Nom", "Typ"] }, "ValueList": { "type": "object", "properties": { "valueReferencePairTypes": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/ValueReferencePairType" } } }, "required": ["valueReferencePairTypes"] }, "ValueReferencePairType": { "allOf": [{ "$ref": "#/definitions/ValueObject" }] }, "ValueObject": { "type": "object", "properties": { "value": { "type": "string" }, "valueId": { "$ref": "#/definitions/Reference" }, "valueType": { "type": "string", "enum": ["anyUri",  "lastCertificate": { "type": "boolean" } } }] }, "AccessControlPolicyPoints": { "type": "object", "properties": { "policyAdministrationPoint": { "$ref": "#/definitions/PolicyAdministrationPoint" }, "policyDecisionPoint": { "$ref": "#/definitions/PolicyDecisionPoint" }, "policyEnforcementPoint": { "$ref": "#/definitions/PolicyEnforcementPoint" }, "policyInformationPoints": { "$ref": "#/definitions/PolicyInformationPoints" } }, "required": ["policyAdministrationPoint", "policyDecisionPoint", "policyEnforcementPoint"] }, "PolicyAdministrationPoint": { "type": "object", "properties": { "localAccessControl": { "$ref": "#/definitions/AccessControl" }, "externalAccessControl": { "type": "boolean" }  
+
+"base64Binary",  },  
+"boolean",  "required": ["externalAccessControl"]  
+"date",  },  
+"dateTime",  "PolicyInformationPoints": {  
+"dateTimeStamp",  "type": "object",  
+"decimal",  "properties": {  
+"integer",  "internalInformationPoint": {  
+"long",  "type": "array",  
+"int",  "items": {  
+"short",  "$ref": "#/definitions/Reference"  
+"byte",  }  
+"nonNegativeInteger",  },  
+"positiveInteger",  "externalInformationPoints": {  
+"unsignedLong",  "type": "boolean"  
+"unsignedInt",  }  
+"unsignedShort",  },  
+"unsignedByte",  "required": ["externalInformationPoints"]  
+"nonPositiveInteger",  },  
+"negativeInteger",  "PolicyEnforcementPoint": {  
+"double",  "type": "object",  
+"duration",  "properties": {  
+"dayTimeDuration",  "externalPolicyEnforcementPoint": {  
+"yearMonthDuration",  "type": "boolean"  
+"float",  }  
+"gDay",  },  
+"gMonth",  "required": ["externalPolicyEnforcementPoint"]  
+"gMonthDay",  },  
+"gYear",  "PolicyDecisionPoint": {  
+"gYearMonth",  "type": "object",  
+"hexBinary",  "properties": {  
+"NOTATION",  "externalPolicyDecisionPoints": {  
+"QName",  "type": "boolean"  
+"string",  }  
+"normalizedString",  },  
+"token",  "required": ["externalPolicyDecisionPoints"]  
+"language",  },  
+"Name",  "AccessControl": {  
+
+"NCName",  "type": "object",  
+"ENTITY",  "properties": {  
+"ID",  "selectableSubjectAttributes": {  
+"IDREF",  "$ref": "#/definitions/Reference"  
+"NMTOKEN",  },  
+"time"]  "defaultSubjectAttributes": {  
+}  "$ref": "#/definitions/Reference"  
+}  },  
+},  "selectablePermissions": {  
+"Asset": {  "$ref": "#/definitions/Reference"  
+"allOf": [{  },  
+"$ref": "#/definitions/Identifiable"  "defaultPermissions": {  
+},  "$ref": "#/definitions/Reference"  
+{  },  
+"$ref": "#/definitions/HasDataSpecification"  "selectableEnvironmentAttributes": {  
+},  "$ref": "#/definitions/Reference"  
+{  },  
+"properties": {  "defaultEnvironmentAttributes": {  
+"kind": {  "$ref": "#/definitions/Reference"  
+"$ref": "#/definitions/AssetKind"  },  
+},  "accessPermissionRule": {  
+"assetIdentificationModel": {  "type": "array",  
+"$ref": "#/definitions/Reference"  "items": {  
+},  "$ref":  
+"billOfMaterial": {  "#/definitions/AccessPermissionRule"  
+"$ref": "#/definitions/Reference"  }  
+}  }  
+},  }  
+"required": ["kind"]  },  
+}]  "AccessPermissionRule": {  
+},  "allOf": [{  
+"AssetKind": {  "$ref": "#/definitions/Referable"  
+"type": "string",  },  
+"enum": ["Type",  {  
+"Instance"]  "$ref": "#/definitions/Qualifiable"  
+},  },  
+"ModelingKind": {  {  
+"properties": {  
+
+"type": "string", "enum": ["Template", "Instance"] }, "Submodel": { "allOf": [{ "$ref": "#/definitions/Identifiable" }, { "$ref": "#/definitions/HasDataSpecification" }, { "$ref": "#/definitions/Qualifiable" }, { "$ref": "#/definitions/HasSemantics" }, { "properties": { "kind": { "$ref": "#/definitions/ModelingKind" }, "submodelElements": { "type": "array", "items": { "$ref": "#/definitions/SubmodelElement" } } } }] }, "Constraint": { "type": "object", "properties": { "modelType": { "$ref": "#/definitions/ModelType" }  "targetSubjectAttributes": { "type": "array", "items": { "$ref": "#/definitions/SubjectAttributes" }, "minItems": 1 }, "permissionsPerObject": { "type": "array", "items": { "$ref": "#/definitions/PermissionsPerObject" } } }, "required": ["targetSubjectAttributes"] }] }, "SubjectAttributes": { "type": "object", "properties": { "subjectAttributes": { "type": "array", "items": { "$ref": "#/definitions/Reference" }, "minItems": 1 } } }, "PermissionsPerObject": { "type": "object", "properties": { "object": { "$ref": "#/definitions/Reference" }, "targetObjectAttributes": {  
+
+},  "$ref": "#/definitions/ObjectAttributes"  
+"required": ["modelType"]  },  
+},  "permission": {  
+"Operation": {  "type": "array",  
+"allOf": [{  "items": {  
+"$ref": "#/definitions/SubmodelElement"  "$ref": "#/definitions/Permission"  
+},  }  
+{  }  
+"properties": {  }  
+"inputVariable": {  },  
+"type": "array",  "ObjectAttributes": {  
+"items": {  "type": "object",  
+"$ref":  "properties": {  
+"#/definitions/OperationVariable"  "objectAttribute": {  
+}  "type": "array",  
+},  "items": {  
+"outputVariable": {  "$ref": "#/definitions/Property"  
+"type": "array",  },  
+"items": {  "minItems": 1  
+"$ref":  
+"#/definitions/OperationVariable"  }  
+}  }  
+},  },  
+"inoutputVariable": {  "Permission": {  
+"type": "array",  "type": "object",  
+"items": {  "properties": {  
+"$ref":  "permission": {  
+"#/definitions/OperationVariable"  "$ref": "#/definitions/Reference"  
+}  },  
+}  "kindOfPermission": {  
+}  "type": "string",  
+}]  "enum": ["Allow",  
+},  "Deny",  
+"OperationVariable": {  "NotApplicable",  
+"type": "object",  "Undefined"]  
+"properties": {  }  
+"value": {  },  
+"oneOf": [{  "required": ["permission",  
+
+"$ref": "#/definitions/Blob" 
+"kindOfPermission"] }, 
+} { 
+} "$ref": "#/definitions/File" 
+} 
+}, 
+{ 
+
+"$ref": "#/definitions/Capability" 
+}, 
+{ 
+
+"$ref": "#/definitions/Entity" 
+}, 
+{ 
+
+"$ref": "#/definitions/Event" 
+}, 
+{ 
+
+"$ref": "#/definitions/BasicEvent" 
+}, 
+{ 
+
+"$ref": "#/definitions/MultiLanguageProperty" 
+}, 
+{ 
+
+"$ref": "#/definitions/Operation" 
+}, 
+{ 
+
+"$ref": "#/definitions/Property" 
+}, 
+{ 
+
+"$ref": "#/definitions/Range" 
+}, 
+{ 
+
+"$ref": "#/definitions/ReferenceElement" 
+}, 
+{ 
+
+"$ref": "#/definitions/RelationshipElement" 
+}, 
+{ 
+
+"$ref": "#/definitions/SubmodelElementCollection" 
+}] 
+} 
