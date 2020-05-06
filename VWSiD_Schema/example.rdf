@@ -1,0 +1,1181 @@
+@prefix aas: <http://admin-shell.io/aas/2/0#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://admin-shell.io/aas/2/0#administration
+aas:administration rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#allowDuplicates
+aas:allowDuplicates rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#asset
+aas:asset rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#assetIdentificationModel
+aas:assetIdentificationModel rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#assetKind
+aas:assetKind rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#category
+aas:category rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#content
+aas:content rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#datatype
+aas:datatype rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#definition
+aas:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#description
+aas:description rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#hasDataSpecification
+aas:hasDataSpecification rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#id
+aas:id rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#idShort
+aas:idShort rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#idType
+aas:idType rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#identification
+aas:identification rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#index
+aas:index rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#isCaseOf
+aas:isCaseOf rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#key
+aas:key rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#kind
+aas:kind rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#local
+aas:local rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#mimeType
+aas:mimeType rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#ordered
+aas:ordered rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#preferredName
+aas:preferredName rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#propertyCategory
+aas:propertyCategory rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#revision
+aas:revision rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#semanticId
+aas:semanticId rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#shortName
+aas:shortName rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#sourceOfDefinition
+aas:sourceOfDefinition rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#submodel
+aas:submodel rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#submodelElement
+aas:submodelElement rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#submodelElementCollection
+aas:submodelElementCollection rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#type
+aas:type rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#unit
+aas:unit rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#unitId
+aas:unitId rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#value
+aas:value rdf:type owl:AnnotationProperty .
+
+
+###  http://admin-shell.io/aas/2/0#valueId
+aas:valueId rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://admin-shell.io/aas/2/0#AdministrativeInformation
+aas:AdministrativeInformation rdf:type owl:Class .
+
+
+###  http://admin-shell.io/aas/2/0#Asset
+aas:Asset rdf:type owl:Class .
+
+
+###  http://admin-shell.io/aas/2/0#AssetAdministrationShell
+aas:AssetAdministrationShell rdf:type owl:Class .
+
+
+###  http://admin-shell.io/aas/2/0#ConceptDescription
+aas:ConceptDescription rdf:type owl:Class .
+
+
+###  http://admin-shell.io/aas/2/0#DataSpecificationIEC61360
+aas:DataSpecificationIEC61360 rdf:type owl:Class .
+
+
+###  http://admin-shell.io/aas/2/0#File
+aas:File rdf:type owl:Class .
+
+
+###  http://admin-shell.io/aas/2/0#Key
+aas:Key rdf:type owl:Class .
+
+
+###  http://admin-shell.io/aas/2/0#MultiLanguageProperty
+aas:MultiLanguageProperty rdf:type owl:Class .
+
+
+###  http://admin-shell.io/aas/2/0#Property
+aas:Property rdf:type owl:Class .
+
+
+###  http://admin-shell.io/aas/2/0#Reference
+aas:Reference rdf:type owl:Class .
+
+
+###  http://admin-shell.io/aas/2/0#Submodel
+aas:Submodel rdf:type owl:Class .
+
+
+###  http://admin-shell.io/aas/2/0#SubmodelElementCollection
+aas:SubmodelElementCollection rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://customer.com/aas/9175_7013_7091_9168
+<http://customer.com/aas/9175_7013_7091_9168> rdf:type owl:NamedIndividual ,
+                                                       aas:AssetAdministrationShell ;
+                                              aas:asset [ rdf:type aas:Reference ;
+                                                          aas:key [ rdf:type aas:Key ;
+                                                                    aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                    aas:index 0 ;
+                                                                    aas:local "true"^^xsd:boolean ;
+                                                                    aas:type aas:ASSET_IDENTIFIABLE_ELEMENT ;
+                                                                    aas:value <http://customer.com/assets/KHBVZJSQKIY>
+                                                                  ]
+                                                        ] ;
+                                              aas:category "CONSTANT"^^xsd:string ;
+                                              aas:description "A very short description of the AAS instance."@en ;
+                                              aas:idShort "ExampleMotor"^^xsd:string ;
+                                              aas:identification <http://customer.com/aas/9175_7013_7091_9168> ;
+                                              aas:submodel [ rdf:type aas:Reference ;
+                                                             aas:key [ rdf:type aas:Key ;
+                                                                       aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                       aas:index 0 ;
+                                                                       aas:local "true"^^xsd:boolean ;
+                                                                       aas:type aas:SUBMODEL_IDENTIFIABLE_ELEMENT ;
+                                                                       aas:value <http://i40.customer.com/type/1/1/F13E8576F6488342>
+                                                                     ]
+                                                           ] ,
+                                                           [ rdf:type aas:Reference ;
+                                                             aas:key [ rdf:type aas:Key ;
+                                                                       aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                       aas:index 0 ;
+                                                                       aas:local "true"^^xsd:boolean ;
+                                                                       aas:type aas:SUBMODEL_IDENTIFIABLE_ELEMENT ;
+                                                                       aas:value <http://i40.customer.com/type/1/1/7A7104BDAB57E184>
+                                                                     ]
+                                                           ] ,
+                                                           [ rdf:type aas:Reference ;
+                                                             aas:key [ rdf:type aas:Key ;
+                                                                       aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                       aas:index 0 ;
+                                                                       aas:local "true"^^xsd:boolean ;
+                                                                       aas:type aas:SUBMODEL_IDENTIFIABLE_ELEMENT ;
+                                                                       aas:value <http://i40.customer.com/instance/1/1/AC69B1CB44F07935>
+                                                                     ]
+                                                           ] ,
+                                                           [ rdf:type aas:Reference ;
+                                                             aas:key [ rdf:type aas:Key ;
+                                                                       aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                       aas:index 0 ;
+                                                                       aas:local "true"^^xsd:boolean ;
+                                                                       aas:type aas:SUBMODEL_IDENTIFIABLE_ELEMENT ;
+                                                                       aas:value <http://i40.customer.com/type/1/1/1A7B62B529F19152>
+                                                                     ]
+                                                           ] ;
+                                              rdfs:comment "A very short description of the AAS instance."^^xsd:string ;
+                                              rdfs:label "ExampleMotor"^^xsd:string .
+
+
+###  http://customer.com/assets/KHBVZJSQKIY
+<http://customer.com/assets/KHBVZJSQKIY> rdf:type owl:NamedIndividual ,
+                                                  aas:Asset ;
+                                         aas:assetIdentificationModel [ rdf:type aas:Reference ;
+                                                                        aas:key [ rdf:type aas:Key ;
+                                                                                  aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                  aas:index 0 ;
+                                                                                  aas:local "true"^^xsd:boolean ;
+                                                                                  aas:type aas:SUBMODEL_IDENTIFIABLE_ELEMENT ;
+                                                                                  aas:value <http://i40.customer.com/type/1/1/F13E8576F6488342>
+                                                                                ]
+                                                                      ] ;
+                                         aas:assetKind aas:ASSET_INSTANCE ;
+                                         aas:idShort "ServoDCMotor"^^xsd:string ;
+                                         aas:identification <http://customer.com/assets/KHBVZJSQKIY> ;
+                                         rdfs:label "ServoDCMotor"^^xsd:string .
+
+
+###  http://customer.com/cd/1/1/18EBD56F6B43D895
+<http://customer.com/cd/1/1/18EBD56F6B43D895> rdf:type owl:NamedIndividual ,
+                                                       aas:ConceptDescription ;
+                                              aas:category "PROPERTY"^^xsd:string ;
+                                              aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                            aas:datatype "INTEGER_MEASURE"^^xsd:string ;
+                                                            aas:definition "Actual rotation speed with which the motor or feeding unit is operated"@en ,
+                                                                           "Aktuelle Drehzahl, mit welcher der Motor oder die Speiseinheit betrieben wird"@de ;
+                                                            aas:preferredName "Actual rotation speed"@en ,
+                                                                              "Aktuelle Drehzahl"@de ;
+                                                            aas:shortName "RotationSpeed"@en ;
+                                                            aas:unit "1/min"^^xsd:string ;
+                                                            aas:unitId [ rdf:type aas:Reference ;
+                                                                         aas:key [ rdf:type aas:Key ;
+                                                                                   aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                   aas:index 0 ;
+                                                                                   aas:local "false"^^xsd:boolean ;
+                                                                                   aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                   aas:value "0173-1#05-AAA650#002"^^xsd:string
+                                                                                 ]
+                                                                       ]
+                                                          ] ;
+                                              aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                         aas:key [ rdf:type aas:Key ;
+                                                                                   aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                   aas:index 0 ;
+                                                                                   aas:local "false"^^xsd:boolean ;
+                                                                                   aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                   aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                 ]
+                                                                       ] ;
+                                              aas:idShort "RotationSpeed"^^xsd:string ;
+                                              aas:identification <http://customer.com/cd/1/1/18EBD56F6B43D895> ;
+                                              rdfs:label "RotationSpeed"^^xsd:string .
+
+
+###  http://customer.com/cd/1/1/18EBD56F6B43D896
+<http://customer.com/cd/1/1/18EBD56F6B43D896> rdf:type owl:NamedIndividual ,
+                                                       aas:ConceptDescription ;
+                                              aas:category "PROPERTY"^^xsd:string ;
+                                              aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                            aas:datatype "REAL_MEASURE"^^xsd:string ;
+                                                            aas:definition "Actual mechanical torque which the motor passes on at the drive shaft"@en ,
+                                                                           "Aktuelles Drehmoment, welches der Motor an der Abtriebswelle abgibt"@de ;
+                                                            aas:preferredName "Drehmoment"@de ,
+                                                                              "Torque"@en ;
+                                                            aas:shortName "Torque"@en ;
+                                                            aas:unit "Nm"^^xsd:string ;
+                                                            aas:unitId [ rdf:type aas:Reference ;
+                                                                         aas:key [ rdf:type aas:Key ;
+                                                                                   aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                   aas:index 0 ;
+                                                                                   aas:local "false"^^xsd:boolean ;
+                                                                                   aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                   aas:value "0173-1#05-AAA212#003"^^xsd:string
+                                                                                 ]
+                                                                       ]
+                                                          ] ;
+                                              aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                         aas:key [ rdf:type aas:Key ;
+                                                                                   aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                   aas:index 0 ;
+                                                                                   aas:local "false"^^xsd:boolean ;
+                                                                                   aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                   aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                 ]
+                                                                       ] ;
+                                              aas:idShort "Torque"^^xsd:string ;
+                                              aas:identification <http://customer.com/cd/1/1/18EBD56F6B43D896> ;
+                                              rdfs:label "Torque"^^xsd:string .
+
+
+###  http://i40.customer.com/instance/1/1/AC69B1CB44F07935
+<http://i40.customer.com/instance/1/1/AC69B1CB44F07935> rdf:type owl:NamedIndividual ,
+                                                                 aas:Submodel ;
+                                                        aas:category "VARIABLE"^^xsd:string ;
+                                                        aas:idShort "OperationalData"^^xsd:string ;
+                                                        aas:identification <http://i40.customer.com/instance/1/1/AC69B1CB44F07935> ;
+                                                        aas:kind aas:INSTANCE ;
+                                                        aas:semanticId [ rdf:type aas:Reference ;
+                                                                         aas:key [ rdf:type aas:Key ;
+                                                                                   aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                   aas:index 0 ;
+                                                                                   aas:local "false"^^xsd:boolean ;
+                                                                                   aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                   aas:value "0173-1#01-AFZ615#016"^^xsd:string
+                                                                                 ]
+                                                                       ] ;
+                                                        aas:submodelElement [ rdf:type aas:Property ;
+                                                                              aas:idShort "RotationSpeed"^^xsd:string ;
+                                                                              aas:kind aas:INSTANCE ;
+                                                                              aas:propertyCategory aas:VARIABLE ;
+                                                                              aas:semanticId [ rdf:type aas:Reference ;
+                                                                                               aas:key [ rdf:type aas:Key ;
+                                                                                                         aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                         aas:index 0 ;
+                                                                                                         aas:local "true"^^xsd:boolean ;
+                                                                                                         aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                         aas:value <http://customer.com/cd/1/1/18EBD56F6B43D895>
+                                                                                                       ]
+                                                                                             ] ;
+                                                                              aas:value 4370 ;
+                                                                              rdfs:label "RotationSpeed"^^xsd:string
+                                                                            ] ,
+                                                                            [ rdf:type aas:Property ;
+                                                                              aas:idShort "Torque"^^xsd:string ;
+                                                                              aas:kind aas:INSTANCE ;
+                                                                              aas:propertyCategory aas:VARIABLE ;
+                                                                              aas:semanticId [ rdf:type aas:Reference ;
+                                                                                               aas:key [ rdf:type aas:Key ;
+                                                                                                         aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                         aas:index 0 ;
+                                                                                                         aas:local "true"^^xsd:boolean ;
+                                                                                                         aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                         aas:value <http://customer.com/cd/1/1/18EBD56F6B43D896>
+                                                                                                       ]
+                                                                                             ] ;
+                                                                              aas:value "117.4"^^xsd:float ;
+                                                                              rdfs:label "Torque"^^xsd:string
+                                                                            ] ;
+                                                        rdfs:label "OperationalData"^^xsd:string .
+
+
+###  http://i40.customer.com/type/1/1/F13E8576F6488342
+<http://i40.customer.com/type/1/1/F13E8576F6488342> rdf:type owl:NamedIndividual ,
+                                                             aas:Submodel ;
+                                                    aas:category "CONSTANT"^^xsd:string ;
+                                                    aas:description "Hersteller-Identifikation"@de ,
+                                                                    "Identification from Manufacturer"@en ;
+                                                    aas:idShort "Identification"^^xsd:string ;
+                                                    aas:identification <http://i40.customer.com/type/1/1/F13E8576F6488342> ;
+                                                    aas:kind aas:INSTANCE ;
+                                                    aas:semanticId [ rdf:type aas:Reference ;
+                                                                     aas:key [ rdf:type aas:Key ;
+                                                                               aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                               aas:index 0 ;
+                                                                               aas:local "false"^^xsd:boolean ;
+                                                                               aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                               aas:value "0173-1#01-ADN198#009"^^xsd:string
+                                                                             ]
+                                                                   ] ;
+                                                    aas:submodelElement [ rdf:type aas:Property ;
+                                                                          aas:idShort "Manufacturer"^^xsd:string ;
+                                                                          aas:kind aas:INSTANCE ;
+                                                                          aas:propertyCategory aas:CONSTANT ;
+                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                     aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                                     aas:index 0 ;
+                                                                                                     aas:local "false"^^xsd:boolean ;
+                                                                                                     aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                     aas:value "0173-1#02-AAO677#002"^^xsd:string
+                                                                                                   ]
+                                                                                         ] ;
+                                                                          aas:value "CUSTOMER GmbH"^^xsd:string ;
+                                                                          rdfs:label "Manufacturer"^^xsd:string
+                                                                        ] ,
+                                                                        [ rdf:type aas:Property ;
+                                                                          aas:idShort "GLN"^^xsd:string ;
+                                                                          aas:kind aas:INSTANCE ;
+                                                                          aas:propertyCategory aas:CONSTANT ;
+                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                     aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                                     aas:index 0 ;
+                                                                                                     aas:local "false"^^xsd:boolean ;
+                                                                                                     aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                     aas:value "0173-1#02-AAY812#001"^^xsd:string
+                                                                                                   ]
+                                                                                         ] ;
+                                                                          aas:value 10101010 ;
+                                                                          rdfs:label "GLN"^^xsd:string
+                                                                        ] ,
+                                                                        [ rdf:type aas:MultiLanguageProperty ;
+                                                                          aas:idShort "ProductDesignation"^^xsd:string ;
+                                                                          aas:kind aas:INSTANCE ;
+                                                                          aas:propertyCategory aas:CONSTANT ;
+                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                     aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                                     aas:index 0 ;
+                                                                                                     aas:local "false"^^xsd:boolean ;
+                                                                                                     aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                     aas:value "0173-1#02-AAW338#001"^^xsd:string
+                                                                                                   ]
+                                                                                         ] ;
+                                                                          aas:value "I40 Capable Servo Motor"@en ;
+                                                                          rdfs:label "ProductDesignation"^^xsd:string
+                                                                        ] ,
+                                                                        [ rdf:type aas:Property ;
+                                                                          aas:idShort "SerialNumber"^^xsd:string ;
+                                                                          aas:kind aas:INSTANCE ;
+                                                                          aas:propertyCategory aas:CONSTANT ;
+                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                     aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                                     aas:index 0 ;
+                                                                                                     aas:local "false"^^xsd:boolean ;
+                                                                                                     aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                     aas:value "0173-1#02-AAM556#002"^^xsd:string
+                                                                                                   ]
+                                                                                         ] ;
+                                                                          aas:value "P12345678I40"@en ;
+                                                                          rdfs:label "SerialNumber"^^xsd:string
+                                                                        ] ;
+                                                    rdfs:comment "Hersteller-Identifikation"@de ,
+                                                                 "Identification from Manufacturer"@en ;
+                                                    rdfs:label "Identification"^^xsd:string .
+
+
+###  http://i40.customer.com/type/1/1/1A7B62B529F19152
+<http://i40.customer.com/type/1/1/1A7B62B529F19152> rdf:type owl:NamedIndividual ,
+                                                             aas:Submodel ;
+                                                    aas:category "CONSTANT"^^xsd:string ;
+                                                    aas:idShort "Documentation"^^xsd:string ;
+                                                    aas:identification <http://i40.customer.com/type/1/1/1A7B62B529F19152> ;
+                                                    aas:kind aas:INSTANCE ;
+                                                    aas:submodelElementCollection [ rdf:type aas:SubmodelElementCollection ;
+                                                                                    aas:allowDuplicates "false"^^xsd:boolean ;
+                                                                                    aas:idShort "OperatingManual"^^xsd:string ;
+                                                                                    aas:kind aas:INSTANCE ;
+                                                                                    aas:ordered "false"^^xsd:boolean ;
+                                                                                    aas:semanticId [ rdf:type aas:Reference ;
+                                                                                                     aas:key [ rdf:type aas:Key ;
+                                                                                                               aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                               aas:index 0 ;
+                                                                                                               aas:local "true"^^xsd:boolean ;
+                                                                                                               aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                               aas:value <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Document>
+                                                                                                             ]
+                                                                                                   ] ;
+                                                                                    aas:submodelElement [ rdf:type aas:Property ;
+                                                                                                          aas:idShort "DocumentId"^^xsd:string ;
+                                                                                                          aas:kind aas:INSTANCE ;
+                                                                                                          aas:propertyCategory aas:CONSTANT ;
+                                                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                                                     aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                                     aas:index 0 ;
+                                                                                                                                     aas:local "true"^^xsd:boolean ;
+                                                                                                                                     aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                                                     aas:value <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentId/Val>
+                                                                                                                                   ]
+                                                                                                                         ] ;
+                                                                                                          aas:value "3 608 870 A47"^^xsd:string ;
+                                                                                                          rdfs:label "DocumentId"^^xsd:string
+                                                                                                        ] ,
+                                                                                                        [ rdf:type aas:Property ;
+                                                                                                          aas:idShort "DocumentClassId"^^xsd:string ;
+                                                                                                          aas:kind aas:INSTANCE ;
+                                                                                                          aas:propertyCategory aas:CONSTANT ;
+                                                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                                                     aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                                     aas:index 0 ;
+                                                                                                                                     aas:local "true"^^xsd:boolean ;
+                                                                                                                                     aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                                                     aas:value <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentClassification/ClassId>
+                                                                                                                                   ]
+                                                                                                                         ] ;
+                                                                                                          aas:value "03-02"^^xsd:string ;
+                                                                                                          rdfs:label "DocumentClassId"^^xsd:string
+                                                                                                        ] ,
+                                                                                                        [ rdf:type aas:MultiLanguageProperty ;
+                                                                                                          aas:idShort "DocumentClassName"^^xsd:string ;
+                                                                                                          aas:kind aas:INSTANCE ;
+                                                                                                          aas:propertyCategory aas:CONSTANT ;
+                                                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                                                     aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                                     aas:index 0 ;
+                                                                                                                                     aas:local "true"^^xsd:boolean ;
+                                                                                                                                     aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                                                     aas:value <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentClassification/ClassName>
+                                                                                                                                   ]
+                                                                                                                         ] ;
+                                                                                                          aas:value "Bedienung"@de ,
+                                                                                                                    "Operation"@en ;
+                                                                                                          rdfs:label "DocumentClassName"^^xsd:string
+                                                                                                        ] ,
+                                                                                                        [ rdf:type aas:Property ;
+                                                                                                          aas:idShort "DocumentClassificationSystem"^^xsd:string ;
+                                                                                                          aas:kind aas:INSTANCE ;
+                                                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                                                     aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                                     aas:index 0 ;
+                                                                                                                                     aas:local "true"^^xsd:boolean ;
+                                                                                                                                     aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                                                     aas:value <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentClassification/ClassificationSystem>
+                                                                                                                                   ]
+                                                                                                                         ] ;
+                                                                                                          aas:value "VDI2770:2018"^^xsd:string ;
+                                                                                                          rdfs:label "DocumentClassificationSystem"^^xsd:string
+                                                                                                        ] ,
+                                                                                                        [ rdf:type aas:Property ;
+                                                                                                          aas:idShort "OrganizationName"^^xsd:string ;
+                                                                                                          aas:kind aas:INSTANCE ;
+                                                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                                                     aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                                     aas:index 0 ;
+                                                                                                                                     aas:local "true"^^xsd:boolean ;
+                                                                                                                                     aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                                                     aas:value <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Organization/OrganizationName>
+                                                                                                                                   ]
+                                                                                                                         ] ;
+                                                                                                          aas:value "CUSTOMER"^^xsd:string ;
+                                                                                                          rdfs:label "OrganizationName"^^xsd:string
+                                                                                                        ] ,
+                                                                                                        [ rdf:type aas:Property ;
+                                                                                                          aas:idShort "OrganizationOfficialName"^^xsd:string ;
+                                                                                                          aas:kind aas:INSTANCE ;
+                                                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                                                     aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                                     aas:index 0 ;
+                                                                                                                                     aas:local "true"^^xsd:boolean ;
+                                                                                                                                     aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                                                     aas:value <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Organization/OrganizationOfficialName>
+                                                                                                                                   ]
+                                                                                                                         ] ;
+                                                                                                          aas:value "CUSTOMER GmbH"^^xsd:string ;
+                                                                                                          rdfs:label "OrganizationOfficialName"^^xsd:string
+                                                                                                        ] ,
+                                                                                                        [ rdf:type aas:Property ;
+                                                                                                          aas:idShort "Title"^^xsd:string ;
+                                                                                                          aas:kind aas:INSTANCE ;
+                                                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                                                     aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                                     aas:index 0 ;
+                                                                                                                                     aas:local "true"^^xsd:boolean ;
+                                                                                                                                     aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                                                     aas:value <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Description/Title>
+                                                                                                                                   ]
+                                                                                                                         ] ;
+                                                                                                          aas:value "Operating Manual"^^xsd:string ;
+                                                                                                          rdfs:label "Title"^^xsd:string
+                                                                                                        ] ,
+                                                                                                        [ rdf:type aas:Property ;
+                                                                                                          aas:idShort "Language"^^xsd:string ;
+                                                                                                          aas:kind aas:INSTANCE ;
+                                                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                                                     aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                                     aas:index 0 ;
+                                                                                                                                     aas:local "true"^^xsd:boolean ;
+                                                                                                                                     aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                                                     aas:value <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentVersion/Language>
+                                                                                                                                   ]
+                                                                                                                         ] ;
+                                                                                                          aas:value "en-US"^^xsd:string ;
+                                                                                                          rdfs:label "Language"^^xsd:string
+                                                                                                        ] ,
+                                                                                                        [ rdf:type aas:File ;
+                                                                                                          aas:category "PARAMETER"^^xsd:string ;
+                                                                                                          aas:idShort "DigitalFile_PDF"^^xsd:string ;
+                                                                                                          aas:kind aas:INSTANCE ;
+                                                                                                          aas:mimeType "application/pdf"^^xsd:string ;
+                                                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                                                     aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                                     aas:index 0 ;
+                                                                                                                                     aas:local "true"^^xsd:boolean ;
+                                                                                                                                     aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                                                     aas:value <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Description/Title>
+                                                                                                                                   ]
+                                                                                                                         ] ;
+                                                                                                          aas:value "/aasx/OperatingManual.pdf"^^xsd:string ;
+                                                                                                          rdfs:label "DigitalFile_PDF"^^xsd:string
+                                                                                                        ] ;
+                                                                                    rdfs:label "OperatingManual"^^xsd:string
+                                                                                  ] ;
+                                                    rdfs:label "Documentation"^^xsd:string .
+
+
+###  http://i40.customer.com/type/1/1/7A7104BDAB57E184
+<http://i40.customer.com/type/1/1/7A7104BDAB57E184> rdf:type owl:NamedIndividual ,
+                                                             aas:Submodel ;
+                                                    aas:category "CONSTANT"^^xsd:string ;
+                                                    aas:idShort "TechnicalData"^^xsd:string ;
+                                                    aas:identification <http://i40.customer.com/type/1/1/7A7104BDAB57E184> ;
+                                                    aas:kind aas:INSTANCE ;
+                                                    aas:semanticId [ rdf:type aas:Reference ;
+                                                                     aas:key [ rdf:type aas:Key ;
+                                                                               aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                               aas:index 0 ;
+                                                                               aas:local "false"^^xsd:boolean ;
+                                                                               aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                               aas:value "0173-1#01-AFZ615#016"^^xsd:string
+                                                                             ]
+                                                                   ] ;
+                                                    aas:submodelElement [ rdf:type aas:Property ;
+                                                                          aas:idShort "MaxRotationSpeed"^^xsd:string ;
+                                                                          aas:kind aas:INSTANCE ;
+                                                                          aas:propertyCategory aas:PARAMETER ;
+                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                     aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                                     aas:index 0 ;
+                                                                                                     aas:local "true"^^xsd:boolean ;
+                                                                                                     aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                     aas:value "0173-1#02-BAA120#008"^^xsd:string
+                                                                                                   ]
+                                                                                         ] ;
+                                                                          aas:value 5000 ;
+                                                                          rdfs:label "MaxRotationSpeed"^^xsd:string
+                                                                        ] ,
+                                                                        [ rdf:type aas:Property ;
+                                                                          aas:idShort "MaxTorque"^^xsd:string ;
+                                                                          aas:kind aas:INSTANCE ;
+                                                                          aas:propertyCategory aas:PARAMETER ;
+                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                     aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                                     aas:index 0 ;
+                                                                                                     aas:local "true"^^xsd:boolean ;
+                                                                                                     aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                     aas:value "0173-1#02-BAE098#004"^^xsd:string
+                                                                                                   ]
+                                                                                         ] ;
+                                                                          aas:value "200.0"^^xsd:float ;
+                                                                          rdfs:label "MaxTorque"^^xsd:string
+                                                                        ] ,
+                                                                        [ rdf:type aas:Property ;
+                                                                          aas:description "open circuit, external cooling"@en ;
+                                                                          aas:idShort "CoolingType"^^xsd:string ;
+                                                                          aas:kind aas:INSTANCE ;
+                                                                          aas:propertyCategory aas:PARAMETER ;
+                                                                          aas:semanticId [ rdf:type aas:Reference ;
+                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                     aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                                     aas:index 0 ;
+                                                                                                     aas:local "true"^^xsd:boolean ;
+                                                                                                     aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                     aas:value "0173-1#02-BAE122#006"^^xsd:string
+                                                                                                   ]
+                                                                                         ] ;
+                                                                          aas:value "BAB657"^^xsd:string ;
+                                                                          aas:valueId [ rdf:type aas:Reference ;
+                                                                                        aas:key [ rdf:type aas:Key ;
+                                                                                                  aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                                  aas:index 0 ;
+                                                                                                  aas:local "true"^^xsd:boolean ;
+                                                                                                  aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                  aas:value "0173-1#07-BAB657#003"^^xsd:string
+                                                                                                ]
+                                                                                      ] ;
+                                                                          rdfs:comment "open circuit, external cooling"@en ;
+                                                                          rdfs:label "CoolingType"^^xsd:string
+                                                                        ] ;
+                                                    rdfs:label "TechnicalData"^^xsd:string .
+
+
+###  http://i40.customer.com/type/1/1/F13E8576F6488342/BAB657
+<http://i40.customer.com/type/1/1/F13E8576F6488342/BAB657> rdf:type owl:NamedIndividual ,
+                                                                    aas:ConceptDescription ;
+                                                           aas:category "VALUE"^^xsd:string ;
+                                                           aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                         aas:datatype "STRING"^^xsd:string ;
+                                                                         aas:preferredName "offener Kreis, Fremdkühlung"@de ,
+                                                                                           "open circuit, external cooling"@en
+                                                                       ] ;
+                                                           aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                      aas:key [ rdf:type aas:Key ;
+                                                                                                aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                aas:index 0 ;
+                                                                                                aas:local "false"^^xsd:boolean ;
+                                                                                                aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                              ]
+                                                                                    ] ;
+                                                           aas:idShort "BAB657"^^xsd:string ;
+                                                           aas:identification [ aas:id "0173-1#07-BAB657#003"^^xsd:string ;
+                                                                                aas:idType aas:IRDI_IDENTIFIER_TYPE
+                                                                              ] ;
+                                                           rdfs:label "BAB657"^^xsd:string .
+
+
+###  http://i40.customer.com/type/1/1/F13E8576F6488342/MaxRotationSpeed
+<http://i40.customer.com/type/1/1/F13E8576F6488342/MaxRotationSpeed> rdf:type owl:NamedIndividual ,
+                                                                              aas:ConceptDescription ;
+                                                                     aas:administration [ rdf:type aas:AdministrativeInformation ;
+                                                                                          aas:revision ""^^xsd:string
+                                                                                        ] ;
+                                                                     aas:category "PROPERTY"^^xsd:string ;
+                                                                     aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                                   aas:datatype "INTEGER_MEASURE"^^xsd:string ;
+                                                                                   aas:definition "Greatest permissible rotation speed with which the motor or feeding unit may be operated"@en ,
+                                                                                                  """Höchste zulässige Drehzahl, mit welcher der Motor oder die Speiseinheit betrieben werden
+darf"""@de ;
+                                                                                   aas:preferredName "Max. rotation speed"@en ,
+                                                                                                     "max. Drehzahl"@de ;
+                                                                                   aas:unit "1/min"^^xsd:string ;
+                                                                                   aas:unitId [ rdf:type aas:Reference ;
+                                                                                                aas:key [ rdf:type aas:Key ;
+                                                                                                          aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                                          aas:index 0 ;
+                                                                                                          aas:local "false"^^xsd:boolean ;
+                                                                                                          aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                          aas:value "0173-1#05-AAA650#002"^^xsd:string
+                                                                                                        ]
+                                                                                              ]
+                                                                                 ] ;
+                                                                     aas:idShort "MaxRotationSpeed"^^xsd:string ;
+                                                                     aas:identification [ aas:id "0173-1#02-BAA120#008"^^xsd:string ;
+                                                                                          aas:idType aas:IRDI_IDENTIFIER_TYPE
+                                                                                        ] ;
+                                                                     rdfs:label "MaxRotationSpeed"^^xsd:string .
+
+
+###  http://i40.customer.com/type/1/1/F13E8576F6488342/MaxTorque
+<http://i40.customer.com/type/1/1/F13E8576F6488342/MaxTorque> rdf:type owl:NamedIndividual ,
+                                                                       aas:ConceptDescription ;
+                                                              aas:category "PROPERTY"^^xsd:string ;
+                                                              aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                            aas:datatype "REAL_MEASURE"^^xsd:string ;
+                                                                            aas:definition "Greatest permissible mechanical torque which the motor can pass on at the drive shaft"@en ,
+                                                                                           """Größtes mechanisch zulässiges Drehmoment, welches der Motor an der Abtriebswelle abgeben
+kann"""@de ;
+                                                                            aas:preferredName "Max. torque"@en ,
+                                                                                              "max. Drehmoment"@de ;
+                                                                            aas:unit "Nm"^^xsd:string ;
+                                                                            aas:unitId [ rdf:type aas:Reference ;
+                                                                                         aas:key [ rdf:type aas:Key ;
+                                                                                                   aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                                   aas:index 0 ;
+                                                                                                   aas:local "false"^^xsd:boolean ;
+                                                                                                   aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                   aas:value "0173-1#05-AAA212#003"^^xsd:string
+                                                                                                 ]
+                                                                                       ]
+                                                                          ] ;
+                                                              aas:idShort "MaxTorque"^^xsd:string ;
+                                                              aas:identification [ aas:id "0173-1#02-BAE098#004"^^xsd:string ;
+                                                                                   aas:idType aas:IRDI_IDENTIFIER_TYPE
+                                                                                 ] ;
+                                                              rdfs:label "MaxTorque"^^xsd:string .
+
+
+###  http://i40.customer.com/type/1/1/F13E8576F6488342/0173-1#0173-1#02-BAE122#006
+<http://i40.customer.com/type/1/1/F13E8576F6488342/0173-1#0173-1#02-BAE122#006> rdf:type owl:NamedIndividual ,
+                                                                                         aas:ConceptDescription ;
+                                                                                aas:category "PROPERTY"^^xsd:string ;
+                                                                                aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                                              aas:datatype "STRING"^^xsd:string ;
+                                                                                              aas:definition "Summary of various types of cooling, for use as search criteria that limit a selection"@en ,
+                                                                                                             """Zusammenfassung verschiedener Kühlarten, um für Suchmerkmale zu einer begrenzten Auswahl
+zu kommen"""@de ;
+                                                                                              aas:preferredName "Art der Kühlung"@de ,
+                                                                                                                "Cooling type"@en
+                                                                                            ] ;
+                                                                                aas:idShort "CoolingType"^^xsd:string ;
+                                                                                aas:identification [ aas:id "0173-1#02-BAE122#006"^^xsd:string ;
+                                                                                                     aas:idType aas:IRDI_IDENTIFIER_TYPE
+                                                                                                   ] ;
+                                                                                rdfs:label "CoolingType"^^xsd:string .
+
+
+###  http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Document
+<http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Document> rdf:type owl:NamedIndividual ,
+                                                                   aas:ConceptDescription ;
+                                                          aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                        aas:datatype "ENTITY"^^xsd:string ;
+                                                                        aas:definition """Feste und geordnete Menge von für die Verwendung durch Personen bestimmte Informationen,
+die verwaltet und als Einheit zwischen Benutzern und System ausgetauscht werden kann."""@de ;
+                                                                        aas:preferredName "Document"@en ,
+                                                                                          "Dokument"@de ;
+                                                                        aas:shortName "Document"@en ;
+                                                                        aas:sourceOfDefinition "[ISO 15519-1:2010]"^^xsd:string
+                                                                      ] ;
+                                                          aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                     aas:key [ rdf:type aas:Key ;
+                                                                                               aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                               aas:index 0 ;
+                                                                                               aas:local "false"^^xsd:boolean ;
+                                                                                               aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                               aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                             ]
+                                                                                   ] ;
+                                                          aas:idShort "Document"^^xsd:string ;
+                                                          aas:identification <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Document> ;
+                                                          rdfs:label "Document"^^xsd:string .
+
+
+###  http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentVersion
+<http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentVersion> rdf:type owl:NamedIndividual ,
+                                                                          aas:ConceptDescription ;
+                                                                 aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                               aas:datatype "STRING"^^xsd:string ;
+                                                                               aas:definition """Zu jedem Dokument muss eine Menge von mindestens einer Dokumentenversion existieren. Es
+können auch mehrere Dokumentenversionen ausgeliefert werden."""@de ;
+                                                                               aas:preferredName "Document Version"@en ,
+                                                                                                 "Version des Dokuments"@de ;
+                                                                               aas:shortName "DocumentVersion"@en
+                                                                             ] ;
+                                                                 aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                            aas:key [ rdf:type aas:Key ;
+                                                                                                      aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                      aas:index 0 ;
+                                                                                                      aas:local "false"^^xsd:boolean ;
+                                                                                                      aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                      aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                                    ]
+                                                                                          ] ;
+                                                                 aas:idShort "DocumentVersion"^^xsd:string ;
+                                                                 aas:identification <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentVersion> ;
+                                                                 rdfs:label "DocumentVersion"^^xsd:string .
+
+
+###  http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Description/Title
+<http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Description/Title> rdf:type owl:NamedIndividual ,
+                                                                            aas:ConceptDescription ;
+                                                                   aas:category "CONSTANT"^^xsd:string ;
+                                                                   aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                                 aas:datatype "STRING_TRANSLATABLE"^^xsd:string ;
+                                                                                 aas:definition "Sprachabhängiger Titel des Dokuments."@de ;
+                                                                                 aas:preferredName "Titel"@de ,
+                                                                                                   "Title"@en ;
+                                                                                 aas:shortName "Title"@en
+                                                                               ] ;
+                                                                   aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                              aas:key [ rdf:type aas:Key ;
+                                                                                                        aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                        aas:index 0 ;
+                                                                                                        aas:local "false"^^xsd:boolean ;
+                                                                                                        aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                        aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                                      ]
+                                                                                            ] ;
+                                                                   aas:idShort "Title"^^xsd:string ;
+                                                                   aas:identification <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Description/Title> ;
+                                                                   rdfs:label "Title"^^xsd:string .
+
+
+###  http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentClassification/ClassId
+<http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentClassification/ClassId> rdf:type owl:NamedIndividual ,
+                                                                                         aas:ConceptDescription ;
+                                                                                aas:category "CONSTANT"^^xsd:string ;
+                                                                                aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                                              aas:datatype "STRING"^^xsd:string ;
+                                                                                              aas:definition "Eindeutige ID der Klasse in einer Klassifikation."@de ;
+                                                                                              aas:preferredName "Document Class Id"@en ,
+                                                                                                                "Dokumentenklassen ID"@de ;
+                                                                                              aas:shortName "DocumentClassId"@en
+                                                                                            ] ;
+                                                                                aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                                     aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                     aas:index 0 ;
+                                                                                                                     aas:local "false"^^xsd:boolean ;
+                                                                                                                     aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                                     aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                                                   ]
+                                                                                                         ] ;
+                                                                                aas:idShort "DocumentClassId"^^xsd:string ;
+                                                                                aas:identification <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentClassification/ClassId> ;
+                                                                                rdfs:label "DocumentClassId"^^xsd:string .
+
+
+###  http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentClassification/ClassName
+<http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentClassification/ClassName> rdf:type owl:NamedIndividual ,
+                                                                                           aas:ConceptDescription ;
+                                                                                  aas:category "CONSTANT"^^xsd:string ;
+                                                                                  aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                                                aas:datatype "STRING_TRANSLATABLE"^^xsd:string ;
+                                                                                                aas:definition "Liste von sprachabhängigen Namen zur ClassId."@de ;
+                                                                                                aas:preferredName "Document Class Name"@en ;
+                                                                                                aas:shortName "DocumentClassName"@en
+                                                                                              ] ;
+                                                                                  aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                                             aas:key [ rdf:type aas:Key ;
+                                                                                                                       aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                       aas:index 0 ;
+                                                                                                                       aas:local "false"^^xsd:boolean ;
+                                                                                                                       aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                                       aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                                                     ]
+                                                                                                           ] ;
+                                                                                  aas:idShort "DocumentClassName"^^xsd:string ;
+                                                                                  aas:identification <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentClassification/ClassName> ;
+                                                                                  rdfs:label "DocumentClassName"^^xsd:string .
+
+
+###  http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentClassification/ClassificationSystem
+<http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentClassification/ClassificationSystem> rdf:type owl:NamedIndividual ,
+                                                                                                      aas:ConceptDescription ;
+                                                                                             aas:category "CONSTANT"^^xsd:string ;
+                                                                                             aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                                                           aas:datatype "STRING"^^xsd:string ;
+                                                                                                           aas:definition """Eindeutige Kennung für ein Klassifikationssystem. Für Klassifikationen nach VDI 2770 muss
+'VDI2770:2018' verwenden werden."""@de ;
+                                                                                                           aas:preferredName "Classification System"@en ,
+                                                                                                                             "Klassifikationssystem"@de ;
+                                                                                                           aas:shortName "DocumentClassificationSystem"@en
+                                                                                                         ] ;
+                                                                                             aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                                                        aas:key [ rdf:type aas:Key ;
+                                                                                                                                  aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                                  aas:index 0 ;
+                                                                                                                                  aas:local "false"^^xsd:boolean ;
+                                                                                                                                  aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                                                  aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                                                                ]
+                                                                                                                      ] ;
+                                                                                             aas:idShort "DocumentClassificationSystem"^^xsd:string ;
+                                                                                             aas:identification <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentClassification/ClassificationSystem> ;
+                                                                                             rdfs:label "DocumentClassificationSystem"^^xsd:string .
+
+
+###  http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentId/Val
+<http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentId/Val> rdf:type owl:NamedIndividual ,
+                                                                         aas:ConceptDescription ;
+                                                                aas:category "CONSTANT"^^xsd:string ;
+                                                                aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                              aas:datatype "STRING"^^xsd:string ;
+                                                                              aas:definition "die eigentliche Identifikationsnummer"@de ;
+                                                                              aas:preferredName "Document Id"@en ,
+                                                                                                "Dokumenten ID"@de ;
+                                                                              aas:shortName "DocumentId"@en
+                                                                            ] ;
+                                                                aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                           aas:key [ rdf:type aas:Key ;
+                                                                                                     aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                     aas:index 0 ;
+                                                                                                     aas:local "false"^^xsd:boolean ;
+                                                                                                     aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                     aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                                   ]
+                                                                                         ] ;
+                                                                aas:idShort "DocumentIdValue"^^xsd:string ;
+                                                                aas:identification <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentId/Val> ;
+                                                                rdfs:label "DocumentIdValue"^^xsd:string .
+
+
+###  http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentVersion/Language
+<http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentVersion/Language> rdf:type owl:NamedIndividual ,
+                                                                                   aas:ConceptDescription ;
+                                                                          aas:category "CONSTANT"^^xsd:string ;
+                                                                          aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                                        aas:datatype "STRING"^^xsd:string ;
+                                                                                        aas:definition "Eine Liste der im Dokument verwendeten Sprachen."@de ;
+                                                                                        aas:preferredName "Language"@en ,
+                                                                                                          "Sprache"@de ;
+                                                                                        aas:shortName "Language"@en
+                                                                                      ] ;
+                                                                          aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                                     aas:key [ rdf:type aas:Key ;
+                                                                                                               aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                               aas:index 0 ;
+                                                                                                               aas:local "false"^^xsd:boolean ;
+                                                                                                               aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                               aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                                             ]
+                                                                                                   ] ;
+                                                                          aas:idShort "Language"^^xsd:string ;
+                                                                          aas:identification <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentVersion/Language> ;
+                                                                          rdfs:label "Language"^^xsd:string .
+
+
+###  http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentVersionId/Val
+<http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentVersionId/Val> rdf:type owl:NamedIndividual ,
+                                                                                aas:ConceptDescription ;
+                                                                       aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                                     aas:datatype "STRING"^^xsd:string ;
+                                                                                     aas:definition """Verschiedene Versionen eines Dokuments müssen eindeutig identifizierbar sein. Die
+DocumentVersionId stellt eine innerhalb einer Domäne eindeutige Versionsidentifikationsnummer dar."""@de ;
+                                                                                     aas:preferredName "DocumentVersionId"@en ;
+                                                                                     aas:shortName "DocumentVersionId"@en
+                                                                                   ] ;
+                                                                       aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                                  aas:key [ rdf:type aas:Key ;
+                                                                                                            aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                            aas:index 0 ;
+                                                                                                            aas:local "false"^^xsd:boolean ;
+                                                                                                            aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                            aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                                          ]
+                                                                                                ] ;
+                                                                       aas:idShort "DocumentVersionIdValue"^^xsd:string ;
+                                                                       aas:identification <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/DocumentVersionId/Val> ;
+                                                                       rdfs:label "DocumentVersionIdValue"^^xsd:string .
+
+
+###  http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/LifeCycleStatus/SetDate
+<http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/LifeCycleStatus/SetDate> rdf:type owl:NamedIndividual ,
+                                                                                  aas:ConceptDescription ;
+                                                                         aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                                       aas:datatype "DATE"^^xsd:string ;
+                                                                                       aas:definition "Datum und Uhrzeit, an dem der Status festgelegt wurde. Es muss das Datumsformat „YYYYMM-dd“ verwendet werden (Y = Jahr, M = Monat, d = Tag, siehe ISO 8601)."@de ;
+                                                                                       aas:preferredName "Set Date"@en ;
+                                                                                       aas:shortName "SetDate"@en
+                                                                                     ] ;
+                                                                         aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                                    aas:key [ rdf:type aas:Key ;
+                                                                                                              aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                              aas:index 0 ;
+                                                                                                              aas:local "false"^^xsd:boolean ;
+                                                                                                              aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                              aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                                            ]
+                                                                                                  ] ;
+                                                                         aas:idShort "Date"^^xsd:string ;
+                                                                         aas:identification <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/LifeCycleStatus/SetDate> ;
+                                                                         rdfs:label "Date"^^xsd:string .
+
+
+###  http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Organization/OrganizationName
+<http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Organization/OrganizationName> rdf:type owl:NamedIndividual ,
+                                                                                        aas:ConceptDescription ;
+                                                                               aas:category "CONSTANT"^^xsd:string ;
+                                                                               aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                                             aas:datatype "STRING"^^xsd:string ;
+                                                                                             aas:definition "Die gebräuchliche Bezeichnung für die Organisation."@de ;
+                                                                                             aas:preferredName "gebräuchliche Bezeichnung für Organisation"@de ,
+                                                                                                               "organization name"@en ;
+                                                                                             aas:shortName "OrganizationName"@en
+                                                                                           ] ;
+                                                                               aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                                          aas:key [ rdf:type aas:Key ;
+                                                                                                                    aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                    aas:index 0 ;
+                                                                                                                    aas:local "false"^^xsd:boolean ;
+                                                                                                                    aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                                    aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                                                  ]
+                                                                                                        ] ;
+                                                                               aas:idShort "OrganizationName"^^xsd:string ;
+                                                                               aas:identification <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Organization/OrganizationName> ;
+                                                                               rdfs:label "OrganizationName"^^xsd:string .
+
+
+###  http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Organization/OrganizationOfficialName
+<http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Organization/OrganizationOfficialName> rdf:type owl:NamedIndividual ,
+                                                                                                aas:ConceptDescription ;
+                                                                                       aas:category "CONSTANT"^^xsd:string ;
+                                                                                       aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                                                     aas:datatype "STRING"^^xsd:string ;
+                                                                                                     aas:definition "Der offizielle Namen der Organisation."@de ;
+                                                                                                     aas:preferredName "official name of the organization"@en ,
+                                                                                                                       "offizieller Name der Organisation"@de ;
+                                                                                                     aas:shortName "OrganizationOfficialName"@en
+                                                                                                   ] ;
+                                                                                       aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                                                  aas:key [ rdf:type aas:Key ;
+                                                                                                                            aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                            aas:index 0 ;
+                                                                                                                            aas:local "false"^^xsd:boolean ;
+                                                                                                                            aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                                            aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                                                          ]
+                                                                                                                ] ;
+                                                                                       aas:idShort "OrganizationName"^^xsd:string ;
+                                                                                       aas:identification <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Organization/OrganizationOfficialName> ;
+                                                                                       aas:isCaseOf [ rdf:type aas:Reference ;
+                                                                                                      aas:key [ rdf:type aas:Key ;
+                                                                                                                aas:idType aas:IRDI_IDENTIFIER_TYPE ;
+                                                                                                                aas:index 0 ;
+                                                                                                                aas:local "true"^^xsd:boolean ;
+                                                                                                                aas:type aas:CONCEPT_DESCRIPTION_IDENTIFIABLE_ELEMENT ;
+                                                                                                                aas:value "0173-1#02-AAO677#002"^^xsd:string
+                                                                                                              ]
+                                                                                                    ] ;
+                                                                                       rdfs:label "OrganizationName"^^xsd:string .
+
+
+###  http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/StoredDocumentRepresentation/DigitalFile
+<http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/StoredDocumentRepresentation/DigitalFile> rdf:type owl:NamedIndividual ,
+                                                                                                   aas:ConceptDescription ;
+                                                                                          aas:content [ rdf:type aas:DataSpecificationIEC61360 ;
+                                                                                                        aas:datatype "FILE"^^xsd:string ;
+                                                                                                        aas:definition """Eine Datei, die die DocumentVersion repräsentiert. Neben der obligatorischen PDF/A Datei
+können weitere Dateien angegeben werden."""@de ;
+                                                                                                        aas:preferredName "Digital File"@en ;
+                                                                                                        aas:shortName "DigitalFile"@en
+                                                                                                      ] ;
+                                                                                          aas:hasDataSpecification [ rdf:type aas:Reference ;
+                                                                                                                     aas:key [ rdf:type aas:Key ;
+                                                                                                                               aas:idType aas:IRI_IDENTIFIER_TYPE ;
+                                                                                                                               aas:index 0 ;
+                                                                                                                               aas:local "false"^^xsd:boolean ;
+                                                                                                                               aas:type aas:GLOBAL_REFERENCE_KEY_ELEMENT ;
+                                                                                                                               aas:value <http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360>
+                                                                                                                             ]
+                                                                                                                   ] ;
+                                                                                          aas:idShort "DigitalFile"^^xsd:string ;
+                                                                                          aas:identification <http://www.vdi2770.com/blatt1/Entwurf/Okt18/cd/StoredDocumentRepresentation/DigitalFile> ;
+                                                                                          rdfs:label "DigitalFile"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
